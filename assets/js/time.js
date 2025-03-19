@@ -24,8 +24,8 @@ function displayClock() {
 	document.getElementById('separator').innerHTML = ' : ';
 	document.getElementById('minutes').innerText = min + ampm;
 
-	document.getElementById('month').innerText = mm;
-	document.getElementById('day').innerText = dd;
+	//document.getElementById('month').innerText = mm;
+	//document.getElementById('day').innerText = dd;
 
-	setTimeout(displayClock, 1000);
+	setTimeout(displayClock, 30000);
 }

@@ -1,8 +1,3 @@
-// ┬  ┌─┐┬ ┬┌─┐┬ ┬┌┬┐
-// │  ├─┤└┬┘│ ││ │ │
-// ┴─┘┴ ┴ ┴ └─┘└─┘ ┴
-// Generate Layout.
-
 const generateLayout = () => {
 	let firstButtonsContainer = `
     <div class="buttonsContainer" id="buttons_1"></div>
@@ -22,16 +17,16 @@ const generateLayout = () => {
 
 	switch (CONFIG.bentoLayout) {
 		case 'bento':
-			linksBlockLeft.insertAdjacentHTML(position, firstButtonsContainer);
+			linksBlock.insertAdjacentHTML(position, firstButtonsContainer);
 			linksBlock.classList.remove('reduceGap');
 			linksBlock.classList.remove('removeGap');
 			break;
 		case 'lists':
-			linksBlockLeft.insertAdjacentHTML(position, firstListsContainer);
+			linksBlock.insertAdjacentHTML(position, firstListsContainer);
 			linksBlock.classList.add('reduceGap');
 			break;
 		case 'buttons':
-			linksBlockLeft.insertAdjacentHTML(position, firstButtonsContainer);
+			linksBlock.insertAdjacentHTML(position, firstButtonsContainer);
 			linksBlock.classList.add('removeGap');
 			break;
 		default:
